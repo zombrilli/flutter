@@ -9,7 +9,7 @@ class FlutterApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          primarySwatch: Colors.red,
+          primarySwatch: Colors.blue,
           textTheme: GoogleFonts.anonymousProTextTheme()),
       debugShowCheckedModeBanner: false,
       home: const LoginPage(),

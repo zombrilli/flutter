@@ -1,5 +1,5 @@
-import 'package:appflutter/pages/main_page.dart';
 import 'package:flutter/material.dart';
+import 'package:appflutter/pages/main_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -9,8 +9,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  var emailController = TextEditingController(text: "");
-  var senhaController = TextEditingController(text: "");
+  var emailController = TextEditingController(text: "email@email.com");
+  var senhaController = TextEditingController(text: "123");
   bool isObscureText = true;
 
   @override
@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                         hintText: "Email",
                         hintStyle: TextStyle(color: Colors.white),
                         prefixIcon: Icon(
-                          Icons.person,
+                          Icons.person_2_outlined,
                           color: Colors.purple,
                         )),
                   ),
@@ -110,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                         hintText: "Senha",
                         hintStyle: const TextStyle(color: Colors.white),
                         prefixIcon: const Icon(
-                          Icons.lock,
+                          Icons.lock_outline,
                           color: Colors.purple,
                         ),
                         suffixIcon: InkWell(
@@ -175,7 +175,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: const Text(
                     "Esqueci minha senha",
                     style: TextStyle(
-                        color: Colors.purple, fontWeight: FontWeight.w400),
+                        color: Colors.yellow, fontWeight: FontWeight.w400),
                   ),
                 ),
                 Container(
