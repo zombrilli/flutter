@@ -1,9 +1,10 @@
 import 'package:appflutter/pages/card_page.dart';
+import 'package:appflutter/pages/list_view_horizontal.dart';
 import 'package:appflutter/shared/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'image_assets.dart';
-import 'pagina3.dart';
+import 'list_view.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -36,21 +37,24 @@ class _MainPageState extends State<MainPage> {
                 children: const [
                   CardPage(),
                   ImageAssetsPage(),
-                  Pagina3Page(),
+                  ListViewPage(),
+                  ListViewHorizontal(),
                 ],
               ),
             ),
             BottomNavigationBar(
+                type: BottomNavigationBarType.fixed,
                 onTap: (value) {
                   controller.jumpToPage(value);
                 },
                 currentIndex: posicaoPagina,
-                items: [
+                items: const [
                   BottomNavigationBarItem(
                       label: "Pag1", icon: Icon(Icons.home)),
                   BottomNavigationBarItem(label: "Pag2", icon: Icon(Icons.add)),
                   BottomNavigationBarItem(
-                      label: "Pag3", icon: Icon(Icons.person))
+                      label: "Pag3", icon: Icon(Icons.person)),
+                  BottomNavigationBarItem(label: "Pag4", icon: Icon(Icons.list))
                 ])
           ],
         ),
